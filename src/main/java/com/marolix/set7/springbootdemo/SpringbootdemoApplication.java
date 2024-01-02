@@ -8,20 +8,19 @@ import org.springframework.context.ConfigurableApplicationContext;
 import com.marolix.set7.springbootdemo.controller.MenuController;
 
 @SpringBootApplication
-public class SpringbootdemoApplication implements CommandLineRunner {
+public class SpringbootdemoApplication  {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(SpringbootdemoApplication.class, args);
 		MenuController mc = context.getBean(MenuController.class);
-		// mc.addToMenu();
-	 mc.viewMenu();
+		mc.addToMenu();
+//	 mc.viewMenu();
 		// mc.viewProductFromMenu();
-	//	mc.deleteProductFromMenu();
+		// mc.deleteProductFromMenu();
+		// mc.searchByName();
+		// mc.filterByPrice();
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
 
-	}
 
 }
